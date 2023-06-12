@@ -1,7 +1,5 @@
 ﻿using Adapters;
-using DataProviders;
 using Microsoft.AspNetCore.Mvc;
-using Tools;
 using UseCases;
 
 namespace SerenityApi.net.Controllers
@@ -10,21 +8,24 @@ namespace SerenityApi.net.Controllers
     [Route("[controller]")]
     public class AuthenticationController : Controller
     {
+        private UserAccessChecker _userAccessChecker;
+        public AuthenticationController( UserAccessChecker userAccessChecker) 
+        {
+            _userAccessChecker = userAccessChecker;
+        }
+
         [HttpPost()]
         [Route("/api/auth")]
         public ActionResult<JwtToken> Authenticate(UserDto user)
         {
-            IUserByNameLoader loader = new UserByNameLoader();
             try
             {
-
-                return new JwtToken { Token = new UserAccessChecker(loader, new RandomString()).Check(user) };
+                return new JwtToken { Token = _userAccessChecker.Check(user) };
             }
             catch (Exception)
             {
                 return Unauthorized();
             }
         }
-
     }
 }
