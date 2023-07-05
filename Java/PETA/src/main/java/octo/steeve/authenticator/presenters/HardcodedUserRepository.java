@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Component
 public class HardcodedUserRepository implements UserRepository {
-    List<User> users = List.of(new User("dertex", "killer"));
+    List<User> users = List.of(new User("dexter", "killer"));
 
     @Override
     public Optional<User> findBy(User user) {
