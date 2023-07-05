@@ -19,7 +19,7 @@ Dans le langage de votre choix, réaliser une (petite) api qui aura comme endpoi
 Ce endpoint récupérera dans le body un json comme celui là
 ```
 {
-"name":"dertex",
+"name":"dexter",
 "password":"killer"
 }
 ```
