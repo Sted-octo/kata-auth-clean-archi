@@ -14,6 +14,6 @@ public final class InMemoryUserRepository implements UserRepository {
 
     @Override
     public boolean passwordIsCorrect(User user) {
-        return "killer".equals(user.name());
+        return "killer".equals(user.password());
     }
 }
