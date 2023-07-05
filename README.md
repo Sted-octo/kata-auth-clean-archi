@@ -29,3 +29,9 @@ Et retournera
    - Si le password ne correspond pas.
    - Si pas de name/password dans le json en entrée (pour faire simple)
  - Un token (on va dire pour faire simple => 32 chars aléatoires)
+
+## Help
+
+```
+curl -X POST http://localhost:8080/api/auth -H "content-type: application/json" -d "{\"name\":\"dexter\",\"password\":\"killer\"}"
+```
