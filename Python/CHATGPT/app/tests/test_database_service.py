@@ -7,9 +7,9 @@ class TestDatabaseService(unittest.TestCase):
         self.database_service = DatabaseService()
 
     def test_get_user_by_name_existing(self):
-        user = self.database_service.get_user_by_name("dertex")
+        user = self.database_service.get_user_by_name("dexter")
         self.assertIsNotNone(user)
-        self.assertEqual(user.name, "dertex")
+        self.assertEqual(user.name, "dexter")
         self.assertEqual(user.password, "killer")
 
     def test_get_user_by_name_non_existing(self):

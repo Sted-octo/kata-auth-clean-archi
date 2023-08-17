@@ -3,7 +3,7 @@ from app.core.entities import User
 class DatabaseService:
     def __init__(self):
         self.users = {
-            "dertex": User("dertex", "killer")
+            "dexter": User("dexter", "killer")
         }
 
     def get_user_by_name(self, name):
