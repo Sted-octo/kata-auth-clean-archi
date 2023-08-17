@@ -1,6 +1,6 @@
 # auth_api/app/tests/test_database_service.py
 import unittest
-from app.core.database_service import DatabaseService
+from app.database_service import DatabaseService
 
 class TestDatabaseService(unittest.TestCase):
     def setUp(self):
